@@ -1,0 +1,180 @@
+\documentclass[a4paper,answers]{exam}
+\usepackage{exam-randomizechoices}
+\usepackage{tikz}
+\usepackage{tabularx}
+
+\newcounter{matchleft}
+\newcounter{matchright}
+
+\newenvironment{matchtabular}{%
+  \setcounter{matchleft}{0}%
+  \setcounter{matchright}{0}%
+  \tabularx{\textwidth}{%
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}\arabic{matchleft}.}}X%
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchright}\alph{matchright})}}X%
+    }%
+}{\endtabularx}
+
+\lhead{R.D. Charan}
+\chead[\bfseries\large SOF Olympiad Practice]{}
+\rhead{GK: 2.Plants and Animals}
+
+\begin{document}
+
+\begin{center}
+    \fbox{\fbox{\parbox{5.5in}{\centering
+    Answer all the questions.
+    }}}
+\end{center}
+
+\begin{center}
+    \vspace{5mm}
+    \makebox[0.75\textwidth]{Name and Class with Section:\enspace\hrulefill}
+
+    \vspace{5mm}
+    \makebox[0.75\textwidth]{Date:\enspace\hrulefill}
+\end{center}
+
+\begin{questions}
+    \question \fillin is an ectoparasite.
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Lice
+        \choice Tapeworm
+        \choice Mule
+        \choice Newt
+    \end{randomizeoneparchoices}
+
+    \question Insects have hard outer covering made up of a special material called as
+
+    \begin{randomizeoneparchoices}
+	    \CorrectChoice Chitin
+	    \choice Cellulose
+	    \choice Glucose
+	    \choice Calcium pectate
+    \end{randomizeoneparchoices}
+
+    \question Which of the following animals does NOT use gills to breathe?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Dolphin
+        \choice Tadpoles
+        \choice Larvae of dragonflies
+        \choice Shark
+    \end{randomizeoneparchoices}
+
+    \question Which of the following help in converting milk into curd?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Bacteria
+        \choice Viruses
+        \choice Fungi
+        \choice Protozoa
+    \end{randomizeoneparchoices}
+
+    \question Which of the following is NOT a microbe?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Mushroom
+        \choice Virus
+        \choice Bacteria
+        \choice Yeast
+    \end{randomizeoneparchoices}
+
+    \question Select the odd one out.
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Pitcher plant
+        \choice Fir
+        \choice Spruce
+        \choice Deodar
+    \end{randomizeoneparchoices}
+    
+    \question \fillin animals use their tails to grasp the branches of trees.
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Arboreal
+        \choice Desert
+        \choice Terrestrial
+        \choice Aerial
+    \end{randomizeoneparchoices}
+    
+    \question Which of the following statements is correct?
+
+    \begin{randomizechoices}
+        \CorrectChoice Camel has hump on its back to store fat.
+        \choice Duck-billed platypus gives birth to young ones.
+        \choice Polar bear is found in Antartic regions.
+        \choice Crocodile is a warm-blooded animal.
+    \end{randomizechoices}
+    
+    \question Which of these is NOT a reason for migration in animals?
+
+    \begin{randomizechoices}
+        \CorrectChoice They want to sight-see.
+        \choice They migrate in search of food.
+        \choice They migrate to breed.
+        \choice They travel in order to escape heat or cold.
+    \end{randomizechoices}
+    
+    \question Select the INCORRECT staement.
+
+    \begin{randomizechoices}
+        \CorrectChoice Water lily has stomata on the lower surface of leaf.
+        \choice Mangrove plants have breathing roots.
+        \choice Leaves of cactus are reduced to spines.
+        \choice Leaves of tape grass contain no stomata.
+    \end{randomizechoices}
+    
+    \question Which of the following has aerial roots?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Banyan tree
+        \choice Palm tree
+        \choice Fir tree
+        \choice Lemon tree
+    \end{randomizeoneparchoices}
+
+    \question Duckweed is a type of \fillin
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Free-floating plant
+        \choice Terrestrial plant
+        \choice Underwater plant
+        \choice Desert plant
+    \end{randomizeoneparchoices}
+
+    \question Which of the following is NOT a feature of terrestrial animals?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Air bladder
+        \choice Respire through lungs
+        \choice Leathery skin
+        \choice Feathers
+    \end{randomizeoneparchoices}
+    
+    \question Which of the following is a parasitic plant?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Dodder
+        \choice Larch
+        \choice Venus flytrap
+        \choice Cactus
+    \end{randomizeoneparchoices}
+    
+    \question Many animals like lungfishes sleep through the summer. What is this sleep called?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Aestivation
+        \choice Nap
+        \choice Migration
+        \choice Hibernation
+    \end{randomizeoneparchoices}
+    
+\end{questions}
+
+\vspace{10mm}
+% \newpage
+\Huge OMR Answer Sheet
+\input{omr}
+\end{document}

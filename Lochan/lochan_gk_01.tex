@@ -1,0 +1,201 @@
+\documentclass[a4paper,12pt,answers]{exam}
+\usepackage{exam-randomizechoices}
+\usepackage{tikz}
+\usepackage{tabularx}
+
+\newcounter{matchleft}
+\newcounter{matchright}
+
+\newenvironment{matchtabularh}{%
+  \setcounter{matchleft}{0}%
+  \setcounter{matchright}{0}%
+  \tabularx{\textwidth}{%
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}}}X%
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchright}}}X%
+    }%
+}{\endtabularx}
+
+\newenvironment{matchtabular}{%
+  \setcounter{matchleft}{0}%
+  \setcounter{matchright}{0}%
+  \tabularx{\textwidth}{%
+    % >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}\roman{matchleft}.}}X%  Previous version which has a dot i.e. i. ii. etc.
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}(\roman{matchleft}) }}X%
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchright}(\alph{matchright}) }}X%
+    }%
+}{\endtabularx}
+
+\lhead{}
+\chead[\bfseries\large SOF Olympiad Practice \\ GK: 1.Plants and Animals]{}
+\rhead{R.D. Lochan}
+
+\begin{document}
+
+\begin{center}
+    \fbox{\fbox{\parbox{5.5in}{\centering
+    Answer all the questions.
+    }}}
+\end{center}
+
+% \begin{center}
+%     \vspace{5mm}
+%     \makebox[0.75\textwidth]{Name and Class with Section:\enspace\hrulefill}
+
+%     \vspace{5mm}
+%     \makebox[0.75\textwidth]{Date:\enspace\hrulefill}
+% \end{center}
+
+\begin{questions}
+    \question Match column I with column II and select the correct option from the codes given below.
+
+    \begin{matchtabularh}
+        \textbf{Column I} &  \textbf{Column II}
+    \end{matchtabularh}
+    
+    \begin{matchtabular}
+        Sulphur dioxide in air & Damage ozone layer \\ 
+        CFCs & Leads to food toxicity \\ 
+        Sewage dumped in river & Prevents photosynthesis \\ 
+        Dust in air & Produce acid rain \\ 
+        Excess fertiliser in fields & Causes water borne diseases \\
+    \end{matchtabular}
+
+    \begin{randomizechoices}
+        \CorrectChoice (i)-(d), (ii)-(a), (iii)-(e), (iv)-(c), (v)-(b)
+        \choice (i)-(d), (ii)-(a), (iii)-(c), (iv)-(e), (v)-(b)
+        \choice (i)-(b), (ii)-(e), (iii)-(a), (iv)-(c), (v)-(d)
+        \choice (i)-(c), (ii)-(b), (iii)-(e), (iv)-(d), (v)-(a)
+    \end{randomizechoices}
+
+    \question It is an extinct species of flowering plants. It was endemic to an Island in South Atlantic Ocean and was the only memebr of the genus \emph{Nesiota}. What is the name of this plant?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice St.Helena Olive
+        \choice Lemonade Berry
+        \choice Winter Bell
+        \choice Wild Jack
+    \end{randomizeoneparchoices}
+
+    \question This lizard, native to Indonesia, is the largest living species of lizard in the world growing up to 10 ft. These lizards dominate the ecosystems in which they live. It hunts and surprisingly attacks its prey including invertebrates, birds and mammals. What is this lizard called?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Komodo dragon
+        \choice Iguana
+        \choice Skink
+        \choice Gila monster
+    \end{randomizeoneparchoices}
+    
+    \question It looks like a giant guinea pig, but it is not a pig. It is the world's largest rodent native to South America. Its partly-webbed feet make it a good swimmer. It spends much of its time around water or wallowing in mud. Which animal is this?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Capybara
+        \choice Dormouse
+        \choice Kangaroo rat
+        \choice Slow loris
+    \end{randomizeoneparchoices}
+    
+    \question Kangaroos, opossums and wallabies are \fillin
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Marsupials
+        \choice Primates
+        \choice Bovine
+        \choice Monotremes
+    \end{randomizeoneparchoices}
+    
+    \question This animal, found throughout the United States and portions of Canada and Mexico, reacts to extreme danger, by pretending to be dead. It even produces a foul, corpse-like smell from its anal glands. Which animal are we talking about?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Oppossum
+        \choice Tree shrew
+        \choice Aye-aye
+        \choice Dormouse
+    \end{randomizeoneparchoices}
+    
+        \question This fruit is a staple diet in the Pacific Islands. It is eaten baked or boiled, or sliced and fried. It is rich in starch. Name the fruit.
+
+    \begin{randomizeoneparchoices}
+	    \CorrectChoice Breadfruit
+	    \choice Dates
+	    \choice Jackfruit
+	    \choice Cooking plantain
+    \end{randomizeoneparchoices}
+
+    \question The bhut jolokia reigned supreme till 2010 with a scoville measure of a million units. It is grown in the states of the Assam, Nagaland, Arunachal Pradesh and Manipur. What kind of fruit is it?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Chili pepper
+        \choice Mango
+        \choice Coconut
+        \choice Banana
+    \end{randomizeoneparchoices}
+    
+    \question This animal is related to the giraffe, though it is only about five feet high at the shoulder and has a much shorter neck. This mammal has a red-brown body and dazzling white stripes on its legs and bottom. It is a native of Africa. What is it called?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Okapi
+        \choice Echidna
+        \choice Jerboa
+        \choice Horse
+    \end{randomizeoneparchoices}
+    
+    \question Proboscis monkey is a reddish-brown arboreal Old World monkey that is endemic to Southeast Asian island of Borneo. Which of the following is a prominent feature in a proboscis monkey?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Nose
+        \choice Tail
+        \choice Ear
+        \choice Lip
+    \end{randomizeoneparchoices}
+    
+    \question The "Lesser Florican" is a grassland bird, endemic to the Indian subcontinent. It is also known as \fillin
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Kharmor
+        \choice Sarus
+        \choice Bulbul
+        \choice All of these
+    \end{randomizeoneparchoices}
+    
+    \question This animal ejects a defensive fluid produced by its anal glands when in danger. The fluid whichis foul smelling and highly toxic, is sprayed as fas as 3 metres. Name the animal.
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Skunk
+        \choice Slender loris
+        \choice Jellyfish
+        \choice Armadillo
+    \end{randomizeoneparchoices}
+    
+    \question The branch of botany which deals with the scientific study of ancient plants using plant fossils found in sedimentary rocks to understand the evolutionary history of plants is called \fillin
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Paleobotany
+        \choice Astrobotany
+        \choice Forensic botany
+        \choice None of these
+    \end{randomizeoneparchoices}
+    
+    \question This animal is a cousin of cattle but resembles antelopes and is one of the rarest and most threatened mammals on the planet found in the Annamite mountains of Vietnam and Laos. Which animal is this?
+
+    \begin{randomizeoneparchoices}
+        \CorrectChoice Saola
+        \choice Giant panda
+        \choice Vaquita
+        \choice Grizzled tree kangaroo
+    \end{randomizeoneparchoices}
+    
+    \question Select incorrect statement.
+
+    \begin{randomizechoices}
+        \CorrectChoice All mammals without exception give birth to their young ones.
+        \choice Climbing perch can gulp oxygen from the air and uses its pectoral fin to walk on land.
+        \choice Bee hummingbird is the smallest bird on the earth.
+        \choice Brazilian tree frog is a species of frog that eats berries and fruits.
+    \end{randomizechoices}
+\end{questions}
+
+\vspace{10mm}
+\newpage
+\Huge OMR Answer Sheet
+\input{omr}
+\end{document}
