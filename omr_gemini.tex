@@ -1,0 +1,44 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{amsmath}
+
+\pagestyle{empty} % Remove page numbers
+
+\begin{document}
+
+\begin{multicols}{4}
+    \noindent
+    % Define the circle size
+    \newcommand{\circleSize}{0.3cm}
+    
+    % Define the spacing
+    \newcommand{\rowHeight}{0.3cm}
+
+    % Define the numbering position
+    \newcommand{\numberOffset}{0.8cm}
+    
+    % Draw OMR sheet
+    \foreach \i in {1,2,...,100} {
+        \noindent
+        \begin{tikzpicture}
+
+            % Draw row number
+            \node at (-\numberOffset, -\i*\rowHeight) {\textbf{\i}};
+            
+            % Draw circles in column 1
+            \foreach \j in {1,2,3,4} {
+                \draw (0, -\i*\rowHeight) circle (\circleSize);
+                \draw (3*\circleSize, -\i*\rowHeight) circle (\circleSize);
+                \draw (6*\circleSize, -\i*\rowHeight) circle (\circleSize);
+                \draw (9*\circleSize, -\i*\rowHeight) circle (\circleSize);
+            }
+            
+        \end{tikzpicture}
+        
+        \vspace{\rowHeight}
+    }
+\end{multicols}
+
+\end{document}

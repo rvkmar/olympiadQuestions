@@ -1,0 +1,57 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{amsmath}
+
+\pagestyle{empty} % Remove page numbers
+
+\begin{document}
+
+% Define the circle size
+\newcommand{\circleSize}{0.3cm}
+    
+% Define the spacing
+\newcommand{\rowHeight}{0.3cm}
+
+% Define a command to format numbers with leading zeros
+\newcommand{\formatNumber}[1]{%
+    \ifnum#1<10 0#1\else #1\fi%
+}
+
+% Define the header positions
+\newcommand{\drawHeaders}{
+    \node at (0, 0) {A};
+    \node at (3*\circleSize, 0) {B};
+    \node at (6*\circleSize, 0) {C};
+    \node at (9*\circleSize, 0) {D};
+}
+
+% Draw the headers in a separate tikzpicture environment
+\begin{tikzpicture}
+    \drawHeaders
+    \drawHeaders
+\end{tikzpicture}
+
+% Draw OMR sheet
+\begin{multicols}{4}
+    \noindent
+    \foreach \i in {1,2,...,100} {
+        \noindent
+        \begin{tikzpicture}
+
+            % Draw row number with leading zero
+            \node at (-0.8cm, -\i*\rowHeight) {\textbf{\formatNumber{\i}}};
+            
+            % Draw circles in columns
+            \foreach \j in {0,1,2,3} {
+                \draw (\j*3*\circleSize, -\i*\rowHeight) circle (\circleSize);
+            }
+            
+        \end{tikzpicture}
+        
+        \vspace{\rowHeight}
+    }
+\end{multicols}
+
+\end{document}

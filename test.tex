@@ -1,0 +1,31 @@
+% !TEX program = xelatex
+% Magic comment for running the progrm with the desired engine. Should be in the comment mode.
+
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+
+\setdefaultlanguage{tamil}
+\setmainfont[Script=Tamil]{TAU-Marutham}
+
+% Tamil hyphenation in polyglossia
+% \setlanghyphenmins[⟨options⟩]{⟨lang⟩}{⟨l⟩}{⟨r⟩}
+\setlanghyphenmins{tamil}{3}{3}
+
+\begin{document}
+
+\title{முதல் தமிழ் ஆவணம்}
+\author{உங்கள் பெயர்}
+\date{\today}
+
+\maketitle
+
+\section{அறிமுகம்}
+இந்த ஆவணம் தமிழ் மொழியில் எழுதப்பட்டுள்ளது.
+
+\section{மற்றொரு பகுதி}
+இது மற்றொரு பகுதி ஆகும். இது தமிழ் மொழியில் எழுதப்பட்டுள்ளது. இதன் முக்கியத்துவம் கருதி இங்கு எடுத்துரைக்கப்பட்டுள்ளது.
+
+\end{document}

@@ -1,0 +1,37 @@
+\documentclass[a4paper,11pt]{exam}
+\usepackage{exam-randomizechoices}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\newcounter{matchleft}
+\newcounter{matchright}
+
+\newenvironment{matchtabularh}{%
+  \setcounter{matchleft}{0}%
+  \setcounter{matchright}{0}%
+  \tabularx{\textwidth}{%
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}}}X%
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchright}}}X%
+    }%
+}{\endtabularx}
+
+\newenvironment{matchtabular}{%
+  \setcounter{matchleft}{0}%
+  \setcounter{matchright}{0}%
+  \tabularx{\textwidth}{%
+    % >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}\roman{matchleft}.}}X%  Previous version which has a dot i.e. i. ii. etc.
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}(\roman{matchleft}) }}X%
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchright}(\alph{matchright}) }}X%
+    }%
+}{\endtabularx}
+
+% Set header and footer
+\lhead{\today}
+
+\rhead{R.D. Lochan}
+
+% Input the questions
+% \input{01_plants_animals.tex}
+\input{02_earth_environment.tex}
