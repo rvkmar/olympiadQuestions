@@ -15,14 +15,23 @@ use LWP::UserAgent;
 
 # Specify the URLs of the images
 @image_urls = (
-    "https://upload.wikimedia.org/wikipedia/commons/4/4f/Penitentes_Upper_Rio_Blanco_Argentine.jpg"
+    "https://scx2.b-cdn.net/gfx/news/hires/2011/workinglongh.jpg",
+    "https://img.freepik.com/free-vector/hand-drawn-kidney-drawing-illustration_52683-160888.jpg?t=st=1721484525~exp=1721488125~hmac=9d0e033851cdf276a439cb7603a0e378743e3de93df3bf404298164f779b92fe&w=740",
+    "https://img.freepik.com/free-vector/hand-drawn-liver-drawing-illustration_23-2151325544.jpg?w=740&t=st=1721483126~exp=1721483726~hmac=d345a2deff6610cc91b19222b5ca195c5ac8e3584751b64a5880ee73ae2de05e",
+    "https://5.imimg.com/data5/GN/GY/EJ/SELLER-66931108/manual-blood-pressure-machine-500x500.jpg"
 );
 
 # Specify the filenames to save the images as
-@image_filenames = ("01.jpg");
+@image_filenames = ("01.jpg","02.jpg","03.jpg","04.jpg");
 
 # Custom subroutine to download images
 sub download_images {
+    # Skip download if no image URLs are provided
+    if (scalar(@image_urls) == 0) {
+        print "No image URLs provided. Skipping download.\n";
+        return;
+    }
+
     my $ua = LWP::UserAgent->new;
     for (my $i = 0; $i < scalar(@image_urls); $i++) {
         my $image_url = $image_urls[$i];

@@ -23,6 +23,12 @@ use LWP::UserAgent;
 
 # Custom subroutine to download images
 sub download_images {
+    # Skip download if no image URLs are provided
+    if (scalar(@image_urls) == 0) {
+        print "No image URLs provided. Skipping download.\n";
+        return;
+    }
+    
     my $ua = LWP::UserAgent->new;
     for (my $i = 0; $i < scalar(@image_urls); $i++) {
         my $image_url = $image_urls[$i];
