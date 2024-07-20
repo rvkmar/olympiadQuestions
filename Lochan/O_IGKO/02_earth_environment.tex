@@ -12,19 +12,23 @@
 
 \question Study the Venn diagram. \\ X is likely to be \fillin . \\
 
+\resizebox{5.5cm}{!}{
 \begin{tikzpicture}
     % Define circle radii and positions
-    \def\radius{1.8}
-    \def\shift{1.2}
+    \def\radius{2.4}
+    \def\shift{1.4}
 
-    % Draw circles
-    \draw (0,0) circle (\radius) node[left] {Endangered species};
-    \draw (\shift*\radius,0) circle (\radius) node[right] {Endemic to temperate forests of Himalayas};
-    \draw (\radius/2,\shift*\radius) circle (\radius) node[above] {Extinct species};
+   % Draw top circles with labels inside
+   \draw (0,0) circle (\radius) node {\parbox{2.7cm}{\raggedright \large Endangered species}};
+   \draw (\shift*\radius,0) circle (\radius) node {\parbox{2.7cm}{\raggedleft \large Endemic to temperate forests of Himalayas}};
+   
+   % Draw bottom circle with label inside
+   \draw (\shift*\radius/2,-\shift*\radius) circle (\radius) node {\parbox{2.7cm}{\centering \large Extinct species}};
 
-    % Label the intersection
-    \node at (0.5*\radius, 0.5*\radius/360) {X};
+   % Label the intersection of the top two circles
+   \node at (\shift*\radius/2, 0) {\Large X};
 \end{tikzpicture}
+}
 
 \begin{randomizeoneparchoices}
     \CorrectChoice Red panda
@@ -77,8 +81,10 @@
 
     \begin{randomizeoneparchoices}
         \CorrectChoice Arsenic
-        \choice \(\textnormal{PM}_{2.5}\)
-        \choice \(\textnormal{O}_3\)
+        % \choice \(\textnormal{PM}_{2.5}\)
+        % \choice \(\textnormal{O}_3\)
+        \choice PM\textsubscript{2.5}
+        \choice O\textsubscript{3}
         \choice Pb
     \end{randomizeoneparchoices}
 
@@ -258,7 +264,8 @@ Pachmarhi Biosphere Reserve is situated in Madhya Pradesh. The biodiversity foun
 
     \begin{figure}[h!]
         \centering
-        \includegraphics[width=3cm]{02_penitentes.jpg}
+        % \includegraphics[width=3cm]{02_penitentes.jpg}
+        \includegraphics[width=3cm]{01.jpg}
       \end{figure}
 
     \begin{randomizeoneparchoices}
