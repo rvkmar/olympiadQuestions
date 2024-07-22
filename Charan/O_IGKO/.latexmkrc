@@ -15,14 +15,42 @@ use LWP::UserAgent;
 
 # Specify the URLs of the images
 @image_urls = (
-    "https://scx2.b-cdn.net/gfx/news/hires/2011/workinglongh.jpg",
-    "https://img.freepik.com/free-vector/hand-drawn-kidney-drawing-illustration_52683-160888.jpg?t=st=1721484525~exp=1721488125~hmac=9d0e033851cdf276a439cb7603a0e378743e3de93df3bf404298164f779b92fe&w=740",
-    "https://img.freepik.com/free-vector/hand-drawn-liver-drawing-illustration_23-2151325544.jpg?w=740&t=st=1721483126~exp=1721483726~hmac=d345a2deff6610cc91b19222b5ca195c5ac8e3584751b64a5880ee73ae2de05e",
-    "https://5.imimg.com/data5/GN/GY/EJ/SELLER-66931108/manual-blood-pressure-machine-500x500.jpg"
+    ## 01_Our_body_health
+    # "https://scx2.b-cdn.net/gfx/news/hires/2011/workinglongh.jpg", #Heart
+    # "https://img.freepik.com/free-vector/hand-drawn-kidney-drawing-illustration_52683-160888.jpg", #Kidney
+    # "https://img.freepik.com/free-vector/hand-drawn-liver-drawing-illustration_23-2151325544.jpg", #Liver
+    # "https://5.imimg.com/data5/GN/GY/EJ/SELLER-66931108/manual-blood-pressure-machine-500x500.jpg", #Sphygmomanometer - Blood pressure
+    ## References:Human body 
+    ## 02_plants_animals
+    # "https://i.pinimg.com/736x/ef/bd/69/efbd694e48b145808ec415c380beb818.jpg", # Bat
+    # "https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvam9iNjcxLTE4Mi1wLWwxZGE5cTVqLnBuZw.png", # Frog
+    # "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA0L2pvYjcxNC0wMDUtcC5wbmc.png", # Monkey
+    # "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA0L2pvYjY3NC0xMzktdi5qcGc.jpg", # Cobra snake
+    # "https://upload.wikimedia.org/wikipedia/commons/3/3a/Saru_Image.jpg", # papaya leaf
+    # "https://upload.wikimedia.org/wikipedia/commons/4/42/Venus_Fly_Trap_%28Dionaea_muscipula%29_3.jpg" # venus fly trap carnivorous plant
+    ## References
+    ## 03_india_world
+
 );
 
 # Specify the filenames to save the images as
-@image_filenames = ("01.jpg","02.jpg","03.jpg","04.jpg");
+@image_filenames = (
+    ## 01_Our_body_health
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    ## References:Human body
+    ## 02_plants_animals
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    ## References
+    ## 03_india_world
+);
 
 # Custom subroutine to download images
 sub download_images {

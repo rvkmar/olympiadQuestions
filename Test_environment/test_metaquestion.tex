@@ -1,0 +1,77 @@
+\documentclass{exam}
+\usepackage{xparse}
+\usepackage{mdframed} % Optional for framed boxes
+\usepackage{etoolbox} % More robust package for boolean operations
+
+% Redefine the \points command to display "marks" instead of "points"
+\renewcommand{\points}{\marks}
+\renewcommand{\marks}{\textbf{marks}}
+
+% Define a switch to control metadata printing
+\newtoggle{printmetadata}
+\togglefalse{printmetadata} % Default is not to print metadata
+
+% Command to enable metadata printing
+\newcommand{\enablemetadata}{\toggletrue{printmetadata}}
+
+% Define the new environment
+\NewDocumentEnvironment{metaquestion}{O{} O{} O{} O{} m O{choices}}
+{
+    \question #5 \\
+    \begin{#6} %randomchoices environment make error
+}
+{
+    \end{#6}
+    \iftoggle{printmetadata}{
+        \begin{mdframed}
+        \textbf{Metadata:} \\
+        \textbf{Unique Number:} #1 \\
+        \textbf{Difficulty:} #2 \\
+        \textbf{R-value:} #3 \\
+        \textbf{Additional Info:} #4
+        \vspace{1em}
+        \end{mdframed}
+    }{}
+}
+
+\begin{document}
+
+% Uncomment the following line to enable metadata printing
+\enablemetadata
+
+\begin{questions}
+
+\begin{metaquestion}[1][Easy][0.5][This is a sample question]{[2] This is a sample question from the exam class.}
+    \choice Choice A
+    \CorrectChoice Choice B
+    \choice Choice C
+    \choice Choice D
+\end{metaquestion}
+
+\begin{metaquestion}[2][Medium][0.7][] {[3] This is another sample question without additional info.}[oneparchoices]
+    \choice Option 1
+    \choice Option 2
+    \choice Option 3
+    \CorrectChoice Option 4
+\end{metaquestion}
+
+\begin{metaquestion}
+    [1] %Unique number
+    [Easy] %Difficulty
+    [0.5] %Discrimination rPbis
+    [This is a sample question] %Additional info like Topic.
+    {
+    % Question stem start
+    This is a sample question from the exam class.
+    % Question stem end
+    }
+    % Choices environment
+    \choice Choice A
+    \choice Choice B
+    \CorrectChoice Choice C
+    \choice Choice D
+\end{metaquestion}
+
+\end{questions}
+
+\end{document}

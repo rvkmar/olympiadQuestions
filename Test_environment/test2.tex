@@ -1,0 +1,61 @@
+\documentclass[answers]{exam}
+\usepackage{xparse}
+\usepackage{mdframed} % Optional for framed boxes
+\usepackage{etoolbox} % More robust package for boolean operations
+
+% Define a switch to control metadata printing
+\newtoggle{printmetadata}
+\togglefalse{printmetadata} % Default is not to print metadata
+
+% Command to enable metadata printing
+\newcommand{\enablemetadata}{\toggletrue{printmetadata}}
+
+% Define the new environment
+\NewDocumentEnvironment{metaquestion}{O{} O{} O{} O{} m O{choices}}
+{
+    % Begin the question with its content
+    \question #5 \\
+    % Begin the choice environment specified
+    \begin{#6}
+}
+{
+    % End the choice environment
+    \end{#6}
+    % Conditionally print metadata if enabled
+    \iftoggle{printmetadata}{
+        \begin{mdframed}
+        \textbf{Metadata:} \\
+        \textbf{Unique Number:} #1 \\
+        \textbf{Difficulty:} #2 \\
+        \textbf{R-value:} #3 \\
+        \textbf{Additional Info:} #4
+        \vspace{1em}
+        \end{mdframed}
+    }{}
+}
+
+\begin{document}
+
+% Uncomment the following line to enable metadata printing
+\enablemetadata
+
+\begin{questions}
+
+% Sample questions with various choice environments
+\begin{metaquestion}[1][Easy][0.5][This is a sample question]{[2] This is a sample question from the exam class.}
+    \choice Choice A
+    \CorrectChoice Choice B
+    \choice Choice C
+    \choice Choice D
+\end{metaquestion}
+
+\begin{metaquestion}[2][Medium][0.7][] {[3] This is another sample question without additional info.}[oneparchoices]
+    \choice Option 1
+    \choice Option 2
+    \choice Option 3
+    \CorrectChoice Option 4
+\end{metaquestion}
+
+\end{questions}
+
+\end{document}

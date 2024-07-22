@@ -1,35 +1,50 @@
-\documentclass[a4paper,12pt]{exam}
-\usepackage{exam-randomizechoices}
-\usepackage{tikz}
-\usepackage{tabularx}
+\documentclass[12pt, addpoints]{exam}
+\usepackage{amsmath}
 
-% Custom environments
-\newcounter{matchleft}
-\newcounter{matchright}
+\title{Grade 8 Mathematics Examination}
+\author{School Name}
+\date{\today}
 
-\newenvironment{matchtabularh}{%
-  \setcounter{matchleft}{0}%
-  \setcounter{matchright}{0}%
-  \tabularx{\textwidth}{%
-    >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}}}X%
-    >{\leavevmode\hbox to 1.5em{\stepcounter{matchright}}}X%
-    }%
-}{\endtabularx}
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent}
+\renewcommand{\pointname}{mark}
+\renewcommand{\pointnames}{marks}
 
-\newenvironment{matchtabular}{%
-  \setcounter{matchleft}{0}%
-  \setcounter{matchright}{0}%
-  \tabularx{\textwidth}{%
-    % >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}\roman{matchleft}.}}X%  Previous version which has a dot i.e. i. ii. etc.
-    >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}(\roman{matchleft}) }}X%
-    >{\leavevmode\hbox to 1.5em{\stepcounter{matchright}(\alph{matchright}) }}X%
-    }%
-}{\endtabularx}
+\begin{document}
 
-% Set header and footer
-\lhead{\today}
-\chead[\bfseries\large Practice Test\\ GK: 1.Plants and Animals]{}
-\rhead{R.D. Lochan}
+\maketitle
 
-% Input the questions
-\input{01_general.tex}
+\begin{questions}
+
+\question[3] Simplify the following expression and find its absolute value: \( \left| \frac{-7}{3} \right| + \left| \frac{5}{2} \right| \).
+\vspace{2cm}
+
+\question[3] Find the sum of \( \frac{2}{5} \) and \( \frac{3}{7} \). Simplify your answer.
+\vspace{2cm}
+
+\question[3] Simplify the following expression: \( \frac{3}{4} - \left( -\frac{5}{6} \right) \).
+\vspace{2cm}
+
+\question[3] Evaluate the following: \( \left( \frac{2}{3} \times \frac{-9}{4} \right) \div \frac{3}{8} \).
+\vspace{2cm}
+
+\question[3] If \( a = \frac{7}{8} \) and \( b = \frac{-5}{6} \), find the value of \( a \times b \) and its absolute value.
+\vspace{2cm}
+
+\question[3] Subtract \( \frac{4}{9} \) from \( \frac{7}{12} \). Simplify your answer.
+\vspace{2cm}
+
+\question[3] Divide \( \frac{5}{6} \) by \( \frac{2}{3} \). Simplify your answer.
+\vspace{2cm}
+
+\question[3] If \( x = \frac{3}{4} \) and \( y = \frac{-2}{5} \), find the value of \( x + y \) and its absolute value.
+\vspace{2cm}
+
+\question[3] Simplify the following expression: \( \left| \frac{-8}{5} \right| - \left| \frac{3}{7} \right| \).
+\vspace{2cm}
+
+\question[3] Add the following rational numbers: \( \frac{1}{3} + \frac{4}{9} \). Simplify your answer.
+\vspace{2cm}
+
+\end{questions}
+
+\end{document}
