@@ -30,26 +30,27 @@ use LWP::UserAgent;
     # "https://upload.wikimedia.org/wikipedia/commons/4/42/Venus_Fly_Trap_%28Dionaea_muscipula%29_3.jpg" # venus fly trap carnivorous plant
     ## References
     ## 03_india_world
-
+    "https://cdn.britannica.com/40/5340-004-B25ED5CF/Flag-Afghanistan.jpg" # Afghanisthan flag
 );
 
 # Specify the filenames to save the images as
 @image_filenames = (
     ## 01_Our_body_health
-    "01.jpg",
-    "02.jpg",
-    "03.jpg",
-    "04.jpg",
+    # "01.jpg",
+    # "02.jpg",
+    # "03.jpg",
+    # "04.jpg",
     ## References:Human body
     ## 02_plants_animals
-    "05.jpg",
-    "06.jpg",
-    "07.jpg",
-    "08.jpg",
-    "09.jpg",
-    "10.jpg",
+    # "05.jpg",
+    # "06.jpg",
+    # "07.jpg",
+    # "08.jpg",
+    # "09.jpg",
+    # "10.jpg",
     ## References
     ## 03_india_world
+    "11.jpg"
 );
 
 # Custom subroutine to download images
@@ -111,7 +112,7 @@ sub clean_aux_files {
 
 # Ensure the images and auxiliary files are deleted after LaTeX processing
 END {
-    delete_images();
+    # delete_images();
     clean_aux_files();
     print "Tasks successfully completed.";
 }

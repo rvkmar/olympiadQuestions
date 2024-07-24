@@ -15,11 +15,13 @@ use LWP::UserAgent;
 
 # Specify the URLs of the images
 @image_urls = (
-    "https://upload.wikimedia.org/wikipedia/commons/4/4f/Penitentes_Upper_Rio_Blanco_Argentine.jpg"
+    # "https://upload.wikimedia.org/wikipedia/commons/4/4f/Penitentes_Upper_Rio_Blanco_Argentine.jpg" # Penitentes, the ice cone rock
 );
 
 # Specify the filenames to save the images as
-@image_filenames = ("01.jpg");
+@image_filenames = (
+    # "01.jpg" # Penitentes
+    );
 
 # Custom subroutine to download images
 sub download_images {

@@ -1,0 +1,61 @@
+\documentclass[answers]{exam}
+\usepackage{xparse}
+\usepackage{mdframed}
+\usepackage{etoolbox}
+\usepackage{exam-randomizechoices}
+
+\newtoggle{printmetadata}
+\togglefalse{printmetadata}
+
+\NewDocumentEnvironment{metaquestion}{O{} O{} O{} O{} m O{choices}}
+{
+    \question #5 \\
+    \begin{#6}
+}
+{
+    \end{#6}
+    \iftoggle{printmetadata}{
+        \begin{mdframed}
+        \textbf{Metadata:} \\
+        \textbf{Unique Number:} #1 \\
+        \textbf{Difficulty:} #2 \\
+        \textbf{R-value:} #3 \\
+        \textbf{Additional Info:} #4
+        \vspace{1em}
+        \end{mdframed}
+    }{}
+}
+
+\begin{document}
+
+\begin{questions}
+
+\begin{metaquestion}
+    [1] % Unique number
+    [Medium] % Difficulty
+    [Topic: Science] % Topic
+    [1] % Question number under the topic
+    {Which of the following is the largest planet in our solar system?}
+    [choices]
+        \choice Mercury
+        \choice Venus
+        \CorrectChoice Jupiter
+        \choice Mars
+\end{metaquestion}
+
+\begin{metaquestion}
+    [2] % Unique number
+    [Medium] % Difficulty
+    [Topic: Science] % Topic
+    [2] % Question number under the topic
+    {Which planet is known as the Red Planet?}
+    [choices]
+        \choice Mercury
+        \CorrectChoice Mars
+        \choice Venus
+        \choice Jupiter
+\end{metaquestion}
+
+\end{questions}
+
+\end{document}
