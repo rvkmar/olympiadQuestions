@@ -3,39 +3,13 @@
 \usepackage{dirtytalk}
 \usepackage{tikz}
 \usepackage{tabularx}
-\usepackage{enumerate}
 \usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{caption} % For captions without figure environment
-\usepackage{xparse} % LaTeX3 environment
-\usepackage{multicol}
+\usepackage{paralist}
+\usepackage{parskip}
 
 \setrandomizerseed{9999}
-
-% Define custom environments of Big and Small Roman numbers
-\newenvironment{bigroman}[1]
-  {
-    \begin{enumerate}[label=\Roman*.]
-  }
-  { \end{enumerate} }
-
-\newenvironment{smallroman}
-  {
-    \begin{enumerate}[label = (\roman*)]
-  }
-  { \end{enumerate} }
-
-\newenvironment{bigalphabet}[1]
-  {
-    \begin{enumerate}[label = (\Alph*), start=#1]
-  }
-  { \end{enumerate} }
-
-\newenvironment{smallalphabet}[1]
-  {
-    \begin{enumerate}[label = (\alph*), start=#1]
-  }
-  { \end{enumerate} }
 
 % Template for Matching MCQ
 \newcounter{matchleft}
@@ -54,7 +28,6 @@
   \setcounter{matchleft}{0}%
   \setcounter{matchright}{0}%
   \tabularx{\textwidth}{%
-    % >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}\roman{matchleft}.}}X%  Previous version which has a dot i.e. i. ii. etc.
     >{\leavevmode\hbox{} to 1.5em{\stepcounter{matchleft} (\roman{matchleft}) }}X%
     >{\leavevmode\hbox{} to 1.5em{\stepcounter{matchright} (\alph{matchright}) }}X%
     }%
@@ -62,8 +35,8 @@
 
 % Set header and footer
 \lhead{\today}
-\chead[\bfseries\large{} SOF Olympiad Practice \\ GK 06. Language and Literature]{}
-\rhead{R.D. Charan}
+\chead[\bfseries\large{} Name of the Test]{}
+\rhead{Name}
 
 \begin{document}
 

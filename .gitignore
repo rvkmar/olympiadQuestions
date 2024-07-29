@@ -2,4 +2,8 @@
 !*.tex
 !*.pdf
 !*.latexmkrc
+!*.bat
+!*.ps1
+!*.py
 !.gitignore
+images

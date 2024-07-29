@@ -1,11 +1,44 @@
 \documentclass[a4paper,11pt]{exam}
 \usepackage{exam-randomizechoices}
+\usepackage{dirtytalk}
 \usepackage{tikz}
 \usepackage{tabularx}
+\usepackage{enumerate}
 \usepackage{enumitem}
 \usepackage{graphicx}
-\usepackage{fixltx2e}
+\usepackage{caption} % For captions without figure environment
+\usepackage{xparse}
+\usepackage{multicol}
 
+\setrandomizerseed{9999}
+
+% Define custom environments of Big and Small Roman numbers
+\newenvironment{bigroman}[1]
+  {
+    \begin{enumerate}[label=\Roman*.]
+  }
+  { \end{enumerate} }
+
+\newenvironment{smallroman}
+  {
+    \begin{enumerate}[label = (\roman*)]
+  }
+  { \end{enumerate} }
+
+\newenvironment{bigalphabet}[1]
+  {
+    \begin{enumerate}[label = (\Alph*), start=#1]
+  }
+  { \end{enumerate} }
+
+\newenvironment{smallalphabet}[1]
+  {
+    \begin{enumerate}[label = (\alph*), start=#1]
+  }
+  { \end{enumerate} }
+
+
+% Template for Matching MCQ
 \newcounter{matchleft}
 \newcounter{matchright}
 
@@ -13,8 +46,8 @@
   \setcounter{matchleft}{0}%
   \setcounter{matchright}{0}%
   \tabularx{\textwidth}{%
-    >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}}}X%
-    >{\leavevmode\hbox to 1.5em{\stepcounter{matchright}}}X%
+    >{\leavevmode\hbox{} to 1.5em{\stepcounter{matchleft}}}X%
+    >{\leavevmode\hbox{} to 1.5em{\stepcounter{matchright}}}X%
     }%
 }{\endtabularx}
 
@@ -22,18 +55,25 @@
   \setcounter{matchleft}{0}%
   \setcounter{matchright}{0}%
   \tabularx{\textwidth}{%
-    % >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}\roman{matchleft}.}}X%  Previous version which has a dot i.e. i. ii. etc.
-    >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}(\roman{matchleft}) }}X%
-    >{\leavevmode\hbox to 1.5em{\stepcounter{matchright}(\alph{matchright}) }}X%
+    >{\leavevmode\hbox{} to 1.5em{\stepcounter{matchleft} (\roman{matchleft}) }}X%
+    >{\leavevmode\hbox{} to 1.5em{\stepcounter{matchright} (\alph{matchright}) }}X%
     }%
 }{\endtabularx}
 
 % Set header and footer
 \lhead{\today}
-
+\chead[\bfseries\large SOF Olympiad Practice \\ 05. India and the World]{}
 \rhead{R.D. Lochan}
 
+\begin{document}
+
+\begin{center}
+    \fbox{\fbox{\parbox{5.5in}{\centering
+    Answer all the questions.
+    }}}
+\end{center}
+
 % Input the questions
-% \input{01_plants_animals.tex}
-% \input{02_earth_environment.tex}
-\input{03_science_technology.tex}
+\input{questions.tex}
+
+\end{document}
