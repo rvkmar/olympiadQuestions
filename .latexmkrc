@@ -16,9 +16,9 @@ if (system("\"$python_path\" \"$script_path\"") != 0) {
 # Uncomment the engine you want to use. The default is set to pdflatex.
 
 # For pdflatex
-$pdf_mode = 1;
-$pdflatex = 'pdflatex -interaction=nonstopmode -synctex=1 %O %S';
-$dvi_mode = 0;
+# $pdf_mode = 1;
+# $pdflatex = 'pdflatex -interaction=nonstopmode -synctex=1 %O %S';
+# $dvi_mode = 0;
 
 # For xelatex
 # $pdf_mode = 1;

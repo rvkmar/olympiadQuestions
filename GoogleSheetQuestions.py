@@ -50,7 +50,7 @@ for index, row in df.iterrows():
     
     latex_code += "\\end{" + choice_env + "}\n"
 
-latex_code += "\\end{questions}\n"  # End the questions environment
+latex_code += "\n\\end{questions}\n\n"  # End the questions environment
 
 # Save the LaTeX code to a file
 with open("questions.tex", "w") as file:
